@@ -578,7 +578,7 @@ static void __call_rcu_nocb_wake(struct rcu_data *rdp, bool was_alldone,
 			 * (soft-)IRQs. Rely on the final deferred wake-up from
 			 * rcutree_report_cpu_dead()
 			 */
-			rcu_nocb_unlock(rdp);
+			rcu_nocb_unlock_irqrestore(rdp, flags);
 			wake_nocb_gp_defer(rdp, RCU_NOCB_WAKE,
 					   TPS("WakeEmptyIsDeferred"));
 		}
