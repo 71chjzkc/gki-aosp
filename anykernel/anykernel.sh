@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=Capybara Kernel
+kernel.string=Capybara AOSP GKI 5.0
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -34,7 +34,7 @@ no_magisk_check=1
 
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
 
-ui_print "Flashing Capybara Kernel..."
+ui_print "Flashing Capybara AOSP GKI 5.0..."
 
 # boot install
 if [ -L "/dev/block/bootdevice/by-name/init_boot_a" -o -L "/dev/block/by-name/init_boot_a" ]; then
