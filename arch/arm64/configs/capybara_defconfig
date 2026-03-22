@@ -7722,3 +7722,8 @@ CONFIG_ARCH_USE_MEMTEST=y
 #
 # end of Rust hacking
 # end of Kernel hacking
+
+#
+# NTSYNC
+#
+CONFIG_NTSYNC=y
